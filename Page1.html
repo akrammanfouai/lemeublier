@@ -1,48 +1,132 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma boutique en ligne</title>
-    <link rel="stylesheet" href="Page1.css">
+    <title>Site Le Meublier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/96dcb489df.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Ma Boutique en ligne</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Panier</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- section acceuil -->
+     <section id="container">
+      <header>
+        <div class="logo">
+            <p> Le meublier </p>
+        </div>
 
-    <main>
-        <section class="produits">
-            <article class="produit">
-                <img src="chemin/vers/image1.jpg" alt="Nom du produit 1">
-                <h2>Nom du produit 1</h2>
-                <p>Description du produit 1.</p>
-                <p>Prix : $XX.XX</p>
-                <button>Ajouter au panier</button>
-            </article>
+        <!-- menu responsive -->
+        <div class="menu-toggle"></div>
 
-            <article class="produit">
-                <img src="chemin/vers/image2.jpg" alt="Nom du produit 2">
-                <h2>Nom du produit 2</h2>
-                <p>Description du produit 2.</p>
-                <p>Prix : $XX.XX</p>
-                <button>Ajouter au panier</button>
-            </article>
+        <ul class="menu">
+            <li><a href="#container">acceuil</a></li>
+            <li><a href="#a-propos">à propos</a></li>
+            <li><a href="#gallerie">destinations</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+      </header>
+      <div class="container-text">
+          <h1> Meubles et Fournitures </h1>
+          <p> Un meuble sain pour une maison saine</p>
+          <a href="#">Découvrez nos meubles</a>
+      </div>
+    </section> 
 
-            <!-- Ajoutez plus d'articles ici selon vos besoins -->
-        </section>
-    </main>
+    <!-- section a propos -->
+     <section id="a-propos">
+        <div>
+            <p class="tittle-section">à propos</p>
+            <h1 class="sub-tittle-section">Qui sommes nous </h1>
+            <div class="description-photo">
+                    <div class="desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam id voluptatibus dolor facere aperiam numquam quisquam libero minima nostrum, ut laborum veniam, nesciunt a. Quod minima cupiditate ad. Veritatis, amet.</p>
 
+                        <H2>NOS SERVICES</H2>
+                        <div class="list-services">
+                            <div class="service">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <p>RAPIDE</p>
+                            </div>
+                            <div class="service">
+                                <i class="fas fa-money-check-alt"></i>
+                                <p>ECONOMIQUE</p>
+                            </div>
+                            <div class="service">
+                                <i class="fas fa-check"></i>
+                                <p>FIABLE</p>
+                            </div>
+                        </div>
+                </div>
+                <img src="images/Le Meublier.PNG" alt="">
+            </div>
+        </div>
+    </section> 
+
+    <!-- section gallerie destination -->
+    <section id="gallerie">
+            <p class="tittle-section">Nos types de meubles</p>
+            <h1 class="sub-tittle-section"> 4 types </h1>
+            <div class="liste-photos">
+                <div class="gallerie-img">
+                    <img src="images/Chaise.PNG" alt="">
+                    <div class="show-country"><p> Chaise </p></div>
+                </div>
+                <div class="gallerie-img">
+                    <img src="images/Table.PNG" alt="">
+                    <div class="show-country"><p> Table </p></div>
+                </div>
+                <div class="gallerie-img">
+                    <img src="images/Canapé.PNG" alt="">
+                    <div class="show-country"><p> Canapé </p></div>
+                </div>
+                <div class="gallerie-img">
+                    <img src="images/Lit.PNG" alt="">
+                    <div class="show-country"><p> Lit </p></div>
+                </div>
+
+            </div>
+    </section> 
+
+<!--  section contact -->
+    <section id="contact">
+        <p class="tittle-section">contact</p>
+        <h1 class="sub-tittle-section">formulaire de contact</h1>
+        <div>
+            <form action="">
+                <label>Adresse Mail</label>
+                <input type="text" placeholder="Ex: azerty@gmail.com">
+                <label>Message</label>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Votre message..."></textarea>
+                <input type="submit" value="ENVOYER">
+            </form>
+            <div class="sociale">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="images-contact">
+                <img src="images/image-contact.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
     <footer>
-        <p>&copy; 2024 Ma Boutique en ligne. Tous droits réservés.</p>
+        <p>Copyright Faiz Dev Youtube</p>
     </footer>
+
+<script>
+    var menu_toggle = document.querySelector('header .menu-toggle');
+    var menu = document.querySelector('header .menu');
+    menu_toggle.onclick = function(){
+        menu_toggle.classList.toggle('active') ; 
+        menu.classList.toggle('responsive') ; 
+    }
+</script>
+
 </body>
 </html>
